@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="OpenTK" Version="4.6.4" />
+      <PackageReference Include="Veldrid" Version="4.8.0" />
+      <PackageReference Include="Veldrid.ImGui" Version="5.72.0" />
+      <PackageReference Include="Veldrid.SPIRV" Version="1.0.14" />
+      <PackageReference Include="Veldrid.StartupUtilities" Version="4.8.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Utils\**" />
+      <Compile Remove="Nodes\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Utils\**" />
+      <EmbeddedResource Remove="Nodes\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Utils\**" />
+      <None Remove="Nodes\**" />
+    </ItemGroup>
+
+</Project>
